@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+# Sai Gopal Panchakarla — Portfolio
 
-## Project info
+Minimal single-page portfolio built with Vite, React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/d6b8fc15-d3c3-406f-a94f-7d833425dd0b
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/d6b8fc15-d3c3-406f-a94f-7d833425dd0b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Development
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install
+npm run dev      # http://localhost:8080
+npm run lint
+npx tsc --noEmit -p tsconfig.app.json
+npm run build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+To reproduce the GitHub Pages base path locally:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+VITE_BASE_PATH=/sai-gopal-folio/ npm run build
+VITE_BASE_PATH=/sai-gopal-folio/ npm run preview
+```
 
-**Use GitHub Codespaces**
+## Content
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+All copy lives in `src/data/`:
 
-## What technologies are used for this project?
+- `profile.ts` — name, role, summary, contact links, status, education
+- `experience.ts` — roles and resume bullets
+- `skills.ts` — grouped toolkit
+- `work.ts` — selected work case studies
 
-This project is built with:
+The downloadable resume is `public/Sai_Gopal_Panchakarla_Resume.pdf`. Replace that file to update the download; the link uses `import.meta.env.BASE_URL`, so it keeps working under the GitHub Pages subpath.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Design
 
-## How can I deploy this project?
+- Tokens and global styles: `src/index.css`
+- Tailwind theme: `tailwind.config.ts`
+- Fonts are self-hosted with Fontsource (Inter variable + JetBrains Mono 400)
+- Light and dark palettes follow `prefers-color-scheme`; no toggle
+- No component library, no gradients, no shadows
 
-Simply open [Lovable](https://lovable.dev/projects/d6b8fc15-d3c3-406f-a94f-7d833425dd0b) and click on Share -> Publish.
+## Deployment
 
-## Can I connect a custom domain to my Lovable project?
+Pushes to `main` run `.github/workflows/deploy.yml` (lint → typecheck → build → deploy) and publish to GitHub Pages:
 
-Yes, you can!
+**https://iamsaii.github.io/sai-gopal-folio/**
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+One-time setup: repository **Settings → Pages → Source → GitHub Actions**.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The workflow builds with `VITE_BASE_PATH=/sai-gopal-folio/`. If you connect a custom domain, add `public/CNAME`, set `VITE_BASE_PATH=/` in the workflow, and update the canonical/OG URLs in `index.html`.
