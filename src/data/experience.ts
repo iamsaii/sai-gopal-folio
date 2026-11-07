@@ -14,8 +14,8 @@ export const experiences: Experience[] = [
     location: "Hyderabad, IN",
     period: "Sep 2023 – Present",
     achievements: [
-      "Led the migration of a legacy Java monolith to microservices (Node.js, TypeScript, Vue.js, Nuxt.js), defining service boundaries with Domain-Driven Design and moving in phases — cutting feature development time and enabling independent, zero-downtime releases.",
-      "Built an AI grading pipeline on the Gemini API that scores student answers against rubrics using structured prompts and parsed structured output, with BullMQ background jobs and automatic retries — cutting manual grading time by an estimated 60%.",
+      "Led the migration of a legacy Java monolith to microservices (Node.js, TypeScript, Vue.js, Nuxt.js), defining service boundaries with Domain-Driven Design and moving in phases, cutting feature development time and enabling independent, zero-downtime releases.",
+      "Built an AI grading pipeline on the Gemini API that scores student answers against rubrics using structured prompts and parsed structured output, with BullMQ background jobs and automatic retries, cutting manual grading time by an estimated 60%.",
       "Designed and implemented GitHub Actions CI/CD pipelines that automated releases and cut deployment time by over 85%.",
       "Rebuilt SMS and WhatsApp campaign delivery in Node.js and TypeScript, replacing synchronous threaded sending with chunked batch processing, rate limiting, concurrency control, and automatic retries.",
       "Added a Redis cache in front of the database for frequently read endpoints, checking the cache before querying and returning cached responses directly, which reduced database load and response times.",

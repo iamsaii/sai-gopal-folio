@@ -8,8 +8,8 @@ const ContactSection = () => (
       <SectionHeading index="05" title="Contact" />
 
       <p className="max-w-[520px] text-xl leading-relaxed tracking-[-0.01em] text-muted-foreground">
-        I'm open to senior full-stack roles and interesting platform work. The fastest way to reach
-        me is email.
+        I’m open to senior AI engineering and full-stack roles, especially work that combines LLM
+        features with reliable platform engineering. The fastest way to reach me is email.
       </p>
 
       <a
@@ -25,9 +25,6 @@ const ContactSection = () => (
         </a>
         <a href={profile.github} target="_blank" rel="noreferrer" className="link">
           GitHub ↗
-        </a>
-        <a href={profile.phoneHref} className="link">
-          {profile.phone}
         </a>
         <a href={resumeUrl} download className="link">
           Resume ↓

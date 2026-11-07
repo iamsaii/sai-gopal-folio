@@ -8,14 +8,15 @@ const AboutSection = () => (
       <SectionHeading index="01" title="About" />
 
       <p className="text-xl leading-relaxed tracking-[-0.01em] text-foreground">
-        Senior full-stack engineer with {profile.experience} of experience building cloud-hosted web
-        platforms. I lead monolith-to-microservices migrations, design APIs, and ship LLM-powered
-        features — most recently an AI grading pipeline built on the Gemini API.
+        Senior full-stack engineer with {profile.experience} of experience building LLM-powered
+        features and cloud-hosted web platforms. I led a monolith-to-microservices migration, design
+        REST APIs, and care about reliable releases. Most recently, I built an AI grading pipeline on
+        the Gemini API.
       </p>
 
       <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-        I work across TypeScript, Node.js, Vue.js, Nuxt.js, Java, AWS, and Redis, and I care about
-        reliable releases, clear service boundaries, and code that is easy to operate.
+        I work across TypeScript, Node.js, Vue.js, Nuxt.js, Java, AWS, and Redis, with a focus on
+        clear service boundaries, testing, and code that is easy to operate.
       </p>
 
       <div className="mt-10 grid grid-cols-1 gap-6 border-y border-border py-6 sm:grid-cols-3">
