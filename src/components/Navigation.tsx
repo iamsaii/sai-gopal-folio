@@ -6,7 +6,7 @@ const navLinkClassName =
 
 const Navigation = () => (
   <header className="sticky top-0 z-50 border-b border-border bg-background">
-    <div className="mx-auto flex h-14 max-w-[1120px] items-center justify-between gap-4 px-6">
+    <div className="container-page flex h-14 items-center justify-between gap-4">
       <a
         href="#top"
         className="min-w-0 truncate text-sm font-semibold tracking-[-0.01em] transition-colors duration-150 hover:text-link"
@@ -25,9 +25,17 @@ const Navigation = () => (
         </a>
       </nav>
 
-      <a href={resumeUrl} download className="link text-sm md:hidden">
-        Resume ↓
-      </a>
+      <nav aria-label="Mobile" className="flex items-center gap-4 md:hidden">
+        <a href="#work" className={navLinkClassName}>
+          Work
+        </a>
+        <a href="#contact" className={navLinkClassName}>
+          Contact
+        </a>
+        <a href={resumeUrl} download className="link text-sm">
+          Resume ↓
+        </a>
+      </nav>
     </div>
   </header>
 );

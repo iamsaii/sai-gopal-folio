@@ -1,6 +1,5 @@
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
-import EducationSection from "@/components/EducationSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -13,9 +12,8 @@ const Index = () => (
     <main className="page-enter">
       <HeroSection />
       <AboutSection />
-      <ExperienceSection />
       <WorkSection />
-      <EducationSection />
+      <ExperienceSection />
       <ContactSection />
     </main>
     <Footer />

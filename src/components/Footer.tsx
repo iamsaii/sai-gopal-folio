@@ -4,7 +4,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mx-auto max-w-[1120px] px-6 py-10 text-xs text-muted-foreground">
+    <footer className="container-page py-10 text-xs text-muted-foreground">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {year} {profile.name}

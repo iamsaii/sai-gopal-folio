@@ -93,6 +93,10 @@
 }
 
 @layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[960px] px-6;
+  }
+
   .mono-label {
     @apply font-mono text-xs uppercase tracking-[0.1em];
   }

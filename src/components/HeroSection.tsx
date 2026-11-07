@@ -3,7 +3,7 @@ import { mailtoUrl, resumeUrl } from "@/lib/links";
 
 const HeroSection = () => (
   <section id="top" className="border-b border-border">
-    <div className="mx-auto max-w-[1120px] px-6 pb-20 pt-20 md:pb-28 md:pt-28">
+    <div className="container-page pb-20 pt-20 md:pb-28 md:pt-28">
       <div className="max-w-[720px]">
         <p className="mono-label flex items-center gap-2 text-muted-foreground">
           <span className="h-1.5 w-1.5 rounded-full bg-warm" aria-hidden="true" />

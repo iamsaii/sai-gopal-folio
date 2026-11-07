@@ -3,6 +3,7 @@ export type SelectedWork = {
   summary: string;
   stack: string[];
   diagram: "pipeline" | "batches" | "services";
+  caption: string;
 };
 
 export const selectedWork: SelectedWork[] = [
@@ -12,6 +13,7 @@ export const selectedWork: SelectedWork[] = [
       "A Gemini API pipeline that scores student answers against rubrics using structured prompts and parsed structured output. BullMQ background jobs and automatic retries cut manual grading time by an estimated 60%.",
     stack: ["Node.js", "TypeScript", "Gemini API", "BullMQ", "Redis"],
     diagram: "pipeline",
+    caption: "answer → prompt → Gemini → score",
   },
   {
     title: "Campaign delivery rebuild",
@@ -19,6 +21,7 @@ export const selectedWork: SelectedWork[] = [
       "Replaced synchronous threaded sending with chunked batch processing, rate limiting, concurrency control, and automatic retries for high-volume SMS and WhatsApp campaigns.",
     stack: ["Node.js", "TypeScript", "Redis", "AWS"],
     diagram: "batches",
+    caption: "queue → batches → send → retry",
   },
   {
     title: "Monolith to microservices",
@@ -26,5 +29,6 @@ export const selectedWork: SelectedWork[] = [
       "Defined service boundaries with Domain-Driven Design and migrated a legacy Java monolith to Node.js, TypeScript, Vue.js, and Nuxt.js in phases, enabling independent, zero-downtime releases.",
     stack: ["Node.js", "Nuxt.js", "Java", "DDD", "GitHub Actions"],
     diagram: "services",
+    caption: "monolith → services → release",
   },
 ];
