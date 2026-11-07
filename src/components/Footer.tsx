@@ -23,6 +23,14 @@ const Footer = () => {
           <a href="#top" className="link">
             Back to top ↑
           </a>
+          <a
+            href="https://github.com/iamsaii/sai-gopal-folio"
+            target="_blank"
+            rel="noreferrer"
+            className="link"
+          >
+            View source ↗
+          </a>
         </nav>
       </div>
     </footer>
