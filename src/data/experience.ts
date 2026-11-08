@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
     location: "Hyderabad, IN",
     period: "Sep 2023 – Present",
     achievements: [
-      "See Selected Work for details on the monolith migration, AI grading pipeline, and campaign delivery rebuild.",
+      "Led the monolith-to-microservices migration, built the Gemini API grading pipeline, and rebuilt campaign delivery (see Selected Work).",
       "Designed and implemented GitHub Actions CI/CD pipelines that automated releases and cut deployment time by over 85%.",
       "Added a Redis cache in front of the database for frequently read endpoints, cutting database load and response times.",
       "Deployed backend services on AWS (EC2, RDS, S3) and containerized the platform with Docker for client on-premise deployments.",
@@ -24,6 +24,7 @@ export const experiences: Experience[] = [
       "Node.js",
       "TypeScript",
       "Nuxt.js",
+      "Gemini API",
       "BullMQ",
       "Redis",
       "AWS",

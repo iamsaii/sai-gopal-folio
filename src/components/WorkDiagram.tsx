@@ -12,8 +12,7 @@ const WorkDiagram = ({ variant, caption }: WorkDiagramProps) => (
       fill="none"
       stroke="currentColor"
       strokeWidth="1"
-      role="img"
-      aria-label={caption}
+      aria-hidden="true"
       className="h-9 w-full text-muted-foreground/60"
     >
       {variant === "pipeline" ? (

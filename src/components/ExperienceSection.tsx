@@ -47,12 +47,15 @@ const ExperienceSection = () => (
           </article>
         ))}
 
-        <div className="flex flex-col gap-2 py-6 sm:flex-row sm:items-baseline sm:justify-between">
-          <div className="max-w-[720px]">
-            <p className="text-sm font-medium text-foreground">{education.degree}</p>
-            <p className="mt-1 text-xs text-muted-foreground">{education.institution}</p>
+        <div className="grid gap-2 py-6 sm:grid-cols-[150px_1fr] sm:gap-6">
+          <h3 className="mono-label text-muted-foreground sm:pt-1">Education</h3>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+            <div className="max-w-[720px]">
+              <p className="text-sm font-medium text-foreground">{education.degree}</p>
+              <p className="mt-1 text-xs text-muted-foreground">{education.institution}</p>
+            </div>
+            <p className="font-mono text-xs text-muted-foreground">{education.period}</p>
           </div>
-          <p className="font-mono text-xs text-muted-foreground">{education.period}</p>
         </div>
       </div>
     </div>
