@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://iamsaii.github.io/sai-gopal-folio/sitemap.xml
+Sitemap: https://saii.qzz.io/sitemap.xml

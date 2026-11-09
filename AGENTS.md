@@ -22,7 +22,7 @@ npm run preview
 - `index.html` → `src/main.tsx` → `src/App.tsx` → `src/pages/Index.tsx`.
 - `Index.tsx` composes the page: `Navigation` sits outside `<main>`, all sections are inside it.
 - All copy lives in `src/data/`: `profile.ts`, `experience.ts`, `skills.ts`, `work.ts`. Edit data, not JSX, for content and resume bullets.
-- `src/lib/links.ts` builds `mailto:` and resume URLs. The resume is `public/Sai_Gopal_Panchakarla_Resume.pdf`; its link uses `import.meta.env.BASE_URL` so it works on the GitHub Pages subpath.
+- `src/lib/links.ts` builds `mailto:` and resume URLs. The resume is `public/Sai_Gopal_Panchakarla_Resume.pdf`; its link uses `import.meta.env.BASE_URL` so it respects the configured base path.
 - Shared UI: `SectionHeading.tsx`, `WorkDiagram.tsx` (inline decorative SVGs). No `src/components/ui`, no Radix/shadcn — do not reintroduce it.
 
 ## Design rules
@@ -38,9 +38,10 @@ npm run preview
 ## Deployment
 
 - `.github/workflows/deploy.yml` runs on pushes to `main` and PRs: lint → typecheck → build → deploy to GitHub Pages. PRs build but do not deploy.
-- Pages URL: `https://iamsaii.github.io/sai-gopal-folio/`. One-time repo setting: Settings → Pages → Source → GitHub Actions.
-- The build sets `VITE_BASE_PATH=/sai-gopal-folio/`; `vite.config.ts` falls back to `/` locally. Never hardcode root-absolute asset URLs.
-- Custom domain: add `public/CNAME`, set `VITE_BASE_PATH=/`, and update canonical/OG URLs in `index.html`.
+- Site URL: `https://saii.qzz.io/`, served by GitHub Pages with the custom domain in `public/CNAME`. One-time repo setting: Settings → Pages → Source → GitHub Actions and custom domain `saii.qzz.io`.
+- The workflow builds with `VITE_BASE_PATH=/` because the custom domain serves from the root; `vite.config.ts` also falls back to `/` locally. Never hardcode root-absolute asset URLs.
+- Cloudflare DNS must stay DNS-only (grey cloud); proxying breaks GitHub Pages certificate issuance.
+- Canonical/OG URLs in `index.html`, plus `public/robots.txt` and `public/sitemap.xml`, must use the custom domain.
 
 ## Gotchas
 

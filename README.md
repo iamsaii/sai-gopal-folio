@@ -16,8 +16,8 @@ npm run preview
 To reproduce the GitHub Pages base path locally:
 
 ```sh
-VITE_BASE_PATH=/sai-gopal-folio/ npm run build
-VITE_BASE_PATH=/sai-gopal-folio/ npm run preview
+VITE_BASE_PATH=/ npm run build
+VITE_BASE_PATH=/ npm run preview
 ```
 
 ## Content
@@ -43,8 +43,8 @@ The downloadable resume is `public/Sai_Gopal_Panchakarla_Resume.pdf`. Replace th
 
 Pushes to `main` run `.github/workflows/deploy.yml` (lint → typecheck → build → deploy) and publish to GitHub Pages:
 
-**https://iamsaii.github.io/sai-gopal-folio/**
+**https://saii.qzz.io/**
 
-One-time setup: repository **Settings → Pages → Source → GitHub Actions**.
+One-time setup: repository **Settings → Pages → Source → GitHub Actions**, then set the custom domain to `saii.qzz.io`. In Cloudflare, keep the DNS record **DNS-only (grey cloud)** so GitHub Pages can issue its certificate.
 
-The workflow builds with `VITE_BASE_PATH=/sai-gopal-folio/`. If you connect a custom domain, add `public/CNAME`, set `VITE_BASE_PATH=/` in the workflow, and update the canonical/OG URLs in `index.html`.
+The custom domain is declared in `public/CNAME` and the workflow builds with `VITE_BASE_PATH=/` because the site is served from the domain root. If you change the domain, update `public/CNAME`, the canonical/OG URLs in `index.html`, and the URLs in `public/robots.txt` and `public/sitemap.xml`.
